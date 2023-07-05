@@ -11,6 +11,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
+
 			<div class="inner">
 				<div class="play-header">
 					<div class="m-top">
@@ -50,7 +51,9 @@
 					<div class="m-progress">
 						<div class="bar">
 							<span class="pin"></span>
-							<audio src="" id="main-audio"></audio>
+							<audio id="main-audio">
+								<source src="" type="audio/mpeg">
+							</audio>
 						</div>
 						<div class="timer">
 							<span class="current">0:00</span>
@@ -68,8 +71,16 @@
 					</div>
 				</div>
 			</div>
+			<div id="waveform"></div>
+			<div id="minimap"></div>
+
 		</div>
+		<script src="js/jquery-3.6.4.js"></script>
 		<script src="js/music_list.js"></script>
 		<script src="js/script.js"></script>
+		<script src="https://unpkg.com/wavesurfer.js"></script>
+		<script src="js/wavesurfer_main.js"></script>
+		<script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.minimap.min.js"></script>
+		<script src="js/minimap_conf.js"></script>
 	</body>
 </html>
