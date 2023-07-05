@@ -12,6 +12,8 @@
 	font-style: normal;
 }
 
+
+
 body,div,h2,p,audio,ul,li{ margin: 0; padding: 0; }
 
 ul{ list-style: none; }
@@ -35,26 +37,57 @@ body{
     50%{ background-position: 100% 50%; }
     100%{ background-position: 0% 50%; }
 }
+/*
 .wrapper{
 	width: 100%;
-  height: 100vh;
+  	height: 100vh;
 	background: linear-gradient(-45deg, #fff6b7, #f092bc, #8795e6, #c2ffd8);
-  background-size: 400% 400%;
+  	background-size: 400% 400%;
 	animation: AnimationName 15s ease infinite;
 	display: flex; justify-content: center; align-items: center;
-	user-select: none; /* drag안되게 */
+	user-select: none;
 	position: relative;
 }
+*/
+.wrapper{
+	width: 100%;
+  	height: 100vh;
+	/* background: linear-gradient(-45deg, #fff6b7, #f092bc, #8795e6, #c2ffd8); */
+  	background-size: 400% 400%;
+	animation: AnimationName 15s ease infinite;
+	display: flex; justify-content: center; align-items: center;
+	flex-direction: column;
+	user-select: none;
+	position: relative;
+}
+/*
 .bg{
 	width: 464px; height: 832px;
 	background: url('../images/phone.png') no-repeat;
 	display: flex; justify-content: center; align-items: center;
 }
+*/
+
+/* waveform */
+#waveform {
+	width: 80vh;
+	height: 100px;
+}
+#minimap {
+	width: 50vh;
+	height: 100px;
+}
+
 .inner{
 	width: 350px;
 	padding: 50px 30px 80px;
-	background: rgba(0,0,0,0.5);
+	/*background: rgba(0,0,0,0.5);*/
+	background: linear-gradient(-45deg, #fff6b7, #f092bc, #8795e6, #c2ffd8);
+	background-size: 400% 400%;
+	animation: AnimationName 15s ease infinite;
+	position: relative;
 	border-radius: 40px;
+	border: 1px double #f092bc;
 }
 .play-body{ position: relative; }
 .m-top{
