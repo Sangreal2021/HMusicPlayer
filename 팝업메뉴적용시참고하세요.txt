@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<!-- a태그 밑줄삭제 css -->
+<style type="text/css">
+	a { text-decoration:none }
+</style>
+<!-- a태그 밑줄삭제 css 끝 -->
+
+<script>
+	function allblur() {
+	  for (i = 0; i < document.links.length; i++) {
+		var obj = document.links[i];
+		if(obj.addEventListener) obj.addEventListener("focus", oneblur, false);
+		else if(obj.attachEvent) obj.attachEvent("onfocus", oneblur);
+	  }
+	}
+	 
+	function oneblur(e) {
+	  var evt = e ? e : window.event;
+
+	 
+
+	  if(evt.target) evt.target.blur();
+	  else if(evt.srcElement) evt.srcElement.blur();
+	}
+</script>
+
+<script language="JavaScript">
+
+<!--
+function na_open_window(name, url, left, top, width, height, toolbar, menubar, statusbar, scrollbar, resizable)
+{
+	toolbar_str = toolbar ? 'yes' : 'no';
+	menubar_str = menubar ? 'yes' : 'no';
+	statusbar_str = statusbar ? 'yes' : 'no';
+	scrollbar_str = scrollbar ? 'yes' : 'no';
+	resizable_str = resizable ? 'yes' : 'no';
+	cookie_str = document.cookie;
+	cookie_str.toString();
+	pos_start  = cookie_str.indexOf(name);
+	pos_start  = cookie_str.indexOf('=', pos_start);
+	pos_end    = cookie_str.indexOf(';', pos_start);
+	if (pos_end <= 0) pos_end = cookie_str.length;
+	cookie_val = cookie_str.substring(pos_start + 1, pos_end);
+	if (cookie_val  == "done")
+		return;
+	window.open(url, name, 'left='+left+',top='+top+',width='+width+',height='+height+',toolbar='+toolbar_str+',menubar='+menubar_str+',status='+statusbar_str+',scrollbars='+scrollbar_str+',resizable='+resizable_str);
+}
+
+// -->
+</script>
+
+</head>
+
+<body text="#000000" link="#000000" alink="#000000" vlink="#000000" OnLoad="allblur();">
+<p align="center"><br></p>
+<p align="center"><br></p>
+<p align="center"><br></p>
+<p align="center"><br></p>
+<a href="#" onclick="window.open('index.html','_blank', 'width=375, height=593, toolbar=no, menubar=no, scrollbars=yes, resizable=yes');" onfocus="this.blur()"><p align="center">팝업창으로 열기</a></p>
+
+</html>
